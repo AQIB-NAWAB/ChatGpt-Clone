@@ -1,0 +1,289 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+}
+.sidebar{
+    background-color: #202123;
+    min-height: 100vh;
+    width: fit-content;
+    position: sticky;
+
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 20px;
+}
+
+
+.sidebar_header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    gap: 20px;
+}
+.sidebar_header button{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    color: white;
+    display: flex;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 5px;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar_header button i{
+    font-size: 17px;
+}
+
+.date_teller{
+    padding: 10px 0px;
+    font-weight: 600;
+    font-size: 12px;
+    color: rgb(224, 224, 224);
+    position: sticky;
+    top: 0px;
+    background-color: #202123;
+
+}
+
+.chat_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 70vh;
+    
+
+}
+.chat_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chat{
+    display: flex;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .selected{
+    background-color: #343541;
+  }
+  .chat:hover{
+    background-color: #5d5f6bbb;
+  }
+  .chat i{
+    font-size: 14px;
+    color: rgb(196, 196, 196);
+    
+  }
+  .chat .actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  .chat .actions i:hover{
+    color: white;
+  }
+
+  
+.chat_footer{
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.chat_footer div{
+    display: flex;
+    justify-content: space-between;
+}
+.chat_footer div span{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-size: 14px;
+}
+.chat_footer div span i{
+    font-size: 18px;
+}
+.chat_footer div  .new{
+    background-color: khaki;
+    color: #202123;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.chat_footer .user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+}
+.chat_footer .user button{
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+}
+
+.main{
+    background-color: #343541;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+.main .main_upper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.main .main_upper .btns_group{
+    background-color: #202123;
+    padding: 6px ;
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+}
+.btns_group button{
+    padding: 13px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main .main_upper .btns_group .selcted_btn{
+    background-color: #595a68;
+}
+.main .main_upper .btns_group .selcted_btn i {
+    color: #1ABC9C;
+    font-size: 15px;
+}
+.main_upper h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #595a68;
+    font-size: 40px;
+}
+
+.main_bottom{
+    width: fit-content;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main_bottom .question_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+
+
+}
+
+.prompt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #595a68;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.prompt:hover{
+    background-color: #595a68;
+}
+.prompt h4{
+    color: #dadada;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.prompt p{
+    color: rgb(141, 141, 141);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.prompt_input{
+    background-color: #40414F;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 1px  1px 5px rgba(0, 0, 0, 0.329)    ;
+}
+.prompt_input input{
+    width: 680px;
+    background-color: transparent;
+    border: 0px;
+    outline: 0px;
+    height: 55px;
+    padding-left: 10px;
+    color: white;
+}
+.prompt_input input::placeholder{
+    color: #c5c5c7;
+}
+.prompt_input button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    padding-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+.text{
+    color: white;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media screen and  (max-width:786px) {
+    .sidebar{
+        display: none;
+    }
+    .main{
+        min-height: 100vh;
+    }
+    .text{
+        text-align: center;
+        font-size: 8px;
+    }
+   .main .question_container{
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr)
+    }
+    .small{
+        display: none;
+    }
+    .prompt_input input{
+        width: 100%;
+        min-width: 350px;
+    }
+    
+}
